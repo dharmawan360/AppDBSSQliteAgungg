@@ -46,7 +46,7 @@ class entridata : AppCompatActivity() {
                         val db = DbHelper (this@entridata)
                         db.kdMatkul = "${etKdMatkul.text}"
                         db.nmMatkul = "${etNmMatkul.text}"
-                        db.sks = (spnSks.selectedItem as Int).toString()
+                        db.sks = spnSks.selectedItem as Int
                         db.sifat = if (rdWajib.isChecked)"Wajib" else "Pilihan"
                         if(if(!modeEdit) db.simpan() else db.ubah("${etKdMatkul.text}")){
                             Toast.makeText(
